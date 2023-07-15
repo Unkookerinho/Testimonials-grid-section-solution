@@ -1,0 +1,254 @@
+/* 
+    CSS RESET 
+*/
+
+/* Better box sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Delete default margin, padding and font style */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Responsive images etc. */
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    VARIABLES
+*/
+
+:root {
+    --clr-moderate-violet:         hsl(263, 55%, 52%);
+    --clr-very-dark-grayish-blue:  hsl(217, 19%, 35%);
+    --clr-very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --clr-white:                   hsl(0, 0%, 100%);
+    --clr-light-gray:              hsl(0, 0%, 81%);
+    --clr-light-grayish-blue:      hsl(210, 46%, 95%);
+
+    --opacity-moderate-violet:        hsla(263, 55%, 52%, 0.9);
+    --opacity-light-grayish-blue:     hsla(210, 46%, 95%, 0.5);
+    --opacity-very-dark-grayish-blue: hsla(219, 29%, 14%, 0.5);
+    --opacity-white-one:              hsla(0, 0%, 100%, 0.5);
+    --opacity-white-two:              hsla(0, 0%, 100%, 0.70);
+     
+    --fw-thin: 400;
+    --fw-regular: 500;
+    --fw-semi-bold: 600;
+}
+
+/*
+    BODY
+*/
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
+    MAIN
+*/
+
+main {
+    margin: 4rem 0;
+    display: grid;
+    gap: 1.25rem;
+}
+
+/*
+    DIVS
+*/
+
+section {
+    border-radius: 5px;
+    padding: 1.8rem 2rem;
+
+    box-shadow: 8px 8px 24px 0px var(--clr-light-gray);
+}
+    section h1 {
+        color: var(--clr-white);
+        font-weight: var(--fw-regular);
+        font-size: 0.7rem;
+        letter-spacing: 0.02rem;
+    }
+
+    section h2 {
+        color: var(--opacity-white-one);
+        font-weight: var(--fw-regular);
+        font-size: 0.6rem;
+    }
+
+    section h3 {
+        padding: 1rem 0;
+        padding-right: 0.3rem;
+
+        color: var(--clr-white);
+        font-weight: var(--fw-semi-bold);
+    }
+
+    section p {
+        margin-top: 0.4rem;
+        color: var(--opacity-white-two);
+        font-weight: var(--fw-thin);
+    }
+    
+
+.profile {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+    .profile img {
+        width: 30px;
+
+        border: 2px var(--opacity-light-grayish-blue) solid;
+        border-radius: 50px;
+    }
+
+.Daniel {
+    background-color: var(--clr-moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 12rem;
+}
+    .Daniel p {
+        padding-right: 1rem;
+    }
+
+.Jonathan {
+    background-color: var(--clr-very-dark-grayish-blue);
+}
+
+.Jeanette {
+    background-color: var(--clr-white);
+}
+    .Jeanette h1 {
+        color: var(--clr-very-dark-grayish-blue);
+    }
+    .Jeanette h2 {
+        color: var(--opacity-very-dark-grayish-blue);
+    }
+    .Jeanette h3 {
+        color: var(--clr-very-dark-grayish-blue);
+    }
+    .Jeanette p {
+        color: var(--clr-very-dark-grayish-blue);
+    }
+
+.Patrick {
+    background-color: var(--clr-very-dark-blackish-blue);
+}
+    .Patrick img {
+        border-color: var(--opacity-moderate-violet);
+    }
+
+.Kira {
+    background-color: var(--clr-white);
+}
+    .Kira h1 {
+        color: var(--clr-very-dark-grayish-blue);
+    }
+    .Kira h2 {
+        color: var(--opacity-very-dark-grayish-blue);
+    }
+    .Kira h3 {
+        color: var(--clr-very-dark-grayish-blue);
+    }
+    .Kira p {
+        color: var(--clr-very-dark-grayish-blue);
+    }
+
+/*
+    MEDIA
+*/
+
+@media(min-width:1024px) {
+    main {
+        margin: auto;
+        grid-template-rows: repeat(2, min-max(18.75rem, 1fr));
+        grid-template-columns: repeat(4, 16.5rem);
+        grid-template-areas: 
+        "Daniel Daniel Jonathan Kira"
+        "Jeanette Patrick Patrick Kira";
+        gap: 2rem
+    }
+
+    .profile img {
+        width: 35px;
+    }
+
+    section h1 {
+        font-size: 0.8rem;
+    }
+
+    section h2 {
+        font-size: 0.7rem;
+    }
+
+    section h3 {
+        font-size: 1.3rem;
+    }
+    
+    section p {
+        line-height: 1.3rem;
+    }
+
+    .Daniel {
+        grid-area: Daniel;
+
+        background-position-x: 23rem;
+    }
+
+
+    .Jonathan {
+        grid-area: Jonathan;
+    }
+
+    .Kira {
+        grid-area: Kira;
+    }
+
+    .Jeanette {
+        grid-area: Jeanette;
+    }
+
+    .Patrick {
+        grid-area: Patrick;
+    }
+}
+
+@media(max-width:1023px) {
+    section {
+        width: 20rem;
+    }
+    section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/*
+    FOOTER
+*/
+
+footer { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--clr-very-dark-blackish-blue);
+}
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
