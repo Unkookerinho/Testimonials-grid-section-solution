@@ -8,5 +8,5 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: https://www.frontendmentor.io/solutions/testimonials-grid-section-solution-VwxItQ_kU3
+- Live Site URL: https://unkookerinho.github.io/Testimonials-grid-section-solution/
