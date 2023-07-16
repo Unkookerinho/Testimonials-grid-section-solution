@@ -49,12 +49,16 @@ img, picture, svg, video {
 
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 13px;
 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1 {
+    visibility: hidden;
+    position: absolute;
 }
 
 /*
@@ -77,20 +81,20 @@ section {
 
     box-shadow: 8px 8px 24px 0px var(--clr-light-gray);
 }
-    section h1 {
+    section h2 {
         color: var(--clr-white);
         font-weight: var(--fw-regular);
         font-size: 0.7rem;
         letter-spacing: 0.02rem;
     }
 
-    section h2 {
+    section h3 {
         color: var(--opacity-white-one);
         font-weight: var(--fw-regular);
         font-size: 0.6rem;
     }
 
-    section h3 {
+    section h4 {
         padding: 1rem 0;
         padding-right: 0.3rem;
 
@@ -99,6 +103,7 @@ section {
     }
 
     section p {
+        font-size: 0.812rem;
         margin-top: 0.4rem;
         color: var(--opacity-white-two);
         font-weight: var(--fw-thin);
@@ -136,18 +141,6 @@ section {
 .Jeanette {
     background-color: var(--clr-white);
 }
-    .Jeanette h1 {
-        color: var(--clr-very-dark-grayish-blue);
-    }
-    .Jeanette h2 {
-        color: var(--opacity-very-dark-grayish-blue);
-    }
-    .Jeanette h3 {
-        color: var(--clr-very-dark-grayish-blue);
-    }
-    .Jeanette p {
-        color: var(--clr-very-dark-grayish-blue);
-    }
 
 .Patrick {
     background-color: var(--clr-very-dark-blackish-blue);
@@ -158,25 +151,22 @@ section {
 
 .Kira {
     background-color: var(--clr-white);
+    color: var(--clr-very-dark-grayish-blue);
 }
-    .Kira h1 {
-        color: var(--clr-very-dark-grayish-blue);
-    }
-    .Kira h2 {
-        color: var(--opacity-very-dark-grayish-blue);
-    }
-    .Kira h3 {
-        color: var(--clr-very-dark-grayish-blue);
-    }
-    .Kira p {
-        color: var(--clr-very-dark-grayish-blue);
-    }
+
+.very-dark-grayish-blue {
+    color: var(--clr-very-dark-grayish-blue);
+}
+
+.opacty-very-dark-grayish-blue {
+    color: var(--opacity-very-dark-grayish-blue);
+}
 
 /*
     MEDIA
 */
 
-@media(min-width:1024px) {
+@media(min-width:1220px) {
     main {
         margin: auto;
         grid-template-rows: repeat(2, min-max(18.75rem, 1fr));
@@ -191,15 +181,15 @@ section {
         width: 35px;
     }
 
-    section h1 {
+    section h2 {
         font-size: 0.8rem;
     }
 
-    section h2 {
+    section h3 {
         font-size: 0.7rem;
     }
 
-    section h3 {
+    section h4 {
         font-size: 1.3rem;
     }
     
@@ -231,9 +221,12 @@ section {
     }
 }
 
-@media(max-width:1023px) {
+@media(max-width:1219px) {
+    main {
+        padding: 2rem;
+    }
     section {
-        width: 20rem;
+        max-width: 20rem;
     }
     section h3 {
         font-size: 1.2rem;
