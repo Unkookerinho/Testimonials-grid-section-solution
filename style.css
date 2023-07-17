@@ -57,7 +57,13 @@ body {
 }
 
 h1 {
-    visibility: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
     position: absolute;
 }
 
@@ -128,7 +134,7 @@ section {
     background-color: var(--clr-moderate-violet);
     background-image: url(images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
-    background-position-x: 12rem;
+    background-position: top right 1.7rem;
 }
     .Daniel p {
         padding-right: 1rem;
@@ -200,7 +206,7 @@ section {
     .Daniel {
         grid-area: Daniel;
 
-        background-position-x: 23rem;
+        background-position: top right 5.5rem;
     }
 
 
