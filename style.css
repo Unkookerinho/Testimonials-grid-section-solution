@@ -101,6 +101,10 @@ section {
         font-size: 0.6rem;
     }
 
+    .Jeanette h3, .Kira h3 {
+        color: var(--opacity-very-dark-grayish-blue);
+    }
+
     section h4 {
         padding: 1rem 0;
         padding-right: 0.3rem;
